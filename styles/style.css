@@ -1,0 +1,61 @@
+
+/* default style */
+body {
+    background-color: #F5EEDC;
+    font-family: 'Merriweather', serif;
+  }
+  .mobile-btn {
+    background-color: #f85606;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin: 20px auto;
+  }
+  /* header style */
+  /* header left */
+  .header-left img {
+    width: 60px;
+    color: orange;
+  }
+  .header-left h1 {
+    color: #1A1A40;
+    font-size: 35px;
+  }
+  
+  /* header right */
+  .header-right input {
+    width: 30%;
+    outline: none;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    padding: 5px 7px;
+    border-radius: 5px;
+  }
+  .header-right span {
+    background-color: #DD4A48;
+    color: #fff;
+    padding: 0 15px;
+    line-height: 45px;
+    border-radius: 5px;
+  }
+  .card-mobile {
+    padding: 20px;
+    box-shadow: 2px 4px 8px rgba(90, 89, 89, 0.57);
+    text-align: center;
+  }
+  .card-mobile img {
+    width: 100px;
+    height: 100%;
+  }
+  
+  /* card details */
+  .card-details {
+    padding: 10px;
+    box-shadow: 2px 4px 8px rgba(90, 89, 89, 0.57);
+    overflow: hidden;
+  }
+  .card-details ul {
+    font-size: 15px;
+  }
