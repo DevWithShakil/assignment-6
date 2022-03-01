@@ -123,11 +123,12 @@ const showDetailsUi = details => {
                   <li>Display: ${details.mainFeatures.displaySize}</li>
                   <li>Sensors:${sensors.toString()}</li>
                   <li>Wlan:${WLAN}</li>
+                  <li>Radio:${Radio}</li>
+                  <li>USB:${USB}</li>
                   <li>Bluetooth:${Bluetooth}</li>
                   <li>GPS:${GPS}</li>
                   <li>NFC:${NFC}</li>
-                  <li>Radio:${Radio}</li>
-                  <li>USB:${USB}</li>
+                  
                 </ul>
               </div>
     `
