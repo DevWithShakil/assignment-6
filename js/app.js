@@ -35,7 +35,7 @@ const showDisplayData = mobiles =>{
   const showPhone = document.getElementById("phone-show");
   document.getElementById("spinner").style.display = "none"
   if(mobiles.length === 0){
-    document.getElementById("error-text").innerText = "No result found"
+    document.getElementById("error-text").innerText = "We Couldn`t Find a Match Results for You..."
     document.getElementById("show-all").style.display = "none"
   }
   else{
