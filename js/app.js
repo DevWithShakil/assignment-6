@@ -1,16 +1,16 @@
 // default display none
-document.getElementById("error-msg").style.display = "none";
+document.getElementById("error-msg").style.display = "visible";
 document.getElementById("spinner").style.display = "none"
 document.getElementById("show-all").style.display = "none"
 
-// phone search data
+// Mobile search data
 const loadData = async () => {
    try {
     const searchInput = document.getElementById('search-input');
     const searchValue = searchInput.value.toLowerCase();
     document.getElementById("spinner").style.display = "block"
 
-    //  clear display
+    //  clean display
     searchInput.value = "";
     document.getElementById("error-msg").style.display = "none";
     displayClear("phone-show")
@@ -26,11 +26,11 @@ const loadData = async () => {
        document.getElementById("spinner").style.display = "none"
    }
 }
-// error message
+// error message showing
 const errorMessage = () =>{
   document.getElementById("error-msg").style.display = "block";
 }
-// show ui load data
+// show ui data load
 const showDisplayData = mobiles =>{
   const showPhone = document.getElementById("phone-show");
   document.getElementById("spinner").style.display = "none"
@@ -58,11 +58,11 @@ const showDisplayData = mobiles =>{
           `
           showPhone.appendChild(newDiv);
           document.getElementById("show-all").style.display = "block"
-          // clear display
+          // Clean display
           document.getElementById("error-text").innerText = "";
       });
   }
-  // show all mobiles product
+  // show all mobiles
  document.getElementById("show-all").addEventListener("click",function(){
   mobiles.slice(21,mobiles.length).forEach(mobile => {
     const newDiv = document.createElement("div");
@@ -82,7 +82,7 @@ const showDisplayData = mobiles =>{
      </div>
      `
      showPhone.appendChild(newDiv);
-     // clear display
+     // Clean display
      document.getElementById("error-text").innerText = "";
  });
  })
@@ -95,17 +95,17 @@ const loadDetails = details =>{
     .then(res => res.json())
     .then(data => showDetailsUi(data.data))
 }
-// show details ui
+// showing details ui
 const showDetailsUi = details => {
     const showDetails = document.getElementById("details");
     document.getElementById("spinner").style.display = "none"
     displayClear("details")
     // sensor
      const sensors = details.mainFeatures.sensors;
-    //  others 
+    //  others Features
     const {WLAN,Bluetooth,GPS,NFC,Radio,USB} = details.others;
     
-    //  show ui
+    //  Showing Ui
     const detailDiv = document.createElement("div");
     detailDiv.classList.add("col-md-6")
     detailDiv.classList.add("col-sm-12")
@@ -128,14 +128,15 @@ const showDetailsUi = details => {
                   <li>Bluetooth:${Bluetooth}</li>
                   <li>GPS:${GPS}</li>
                   <li>NFC:${NFC}</li>
-                  
+                  <li>Radio:${Radio}</li>
+                  <li>USB:${USB}</li>
                 </ul>
               </div>
     `
     showDetails.appendChild(detailDiv);
 }
 
-// clear display 
+// Clean display
 const displayClear = id => {
   document.getElementById(id).textContent = "";
 }
