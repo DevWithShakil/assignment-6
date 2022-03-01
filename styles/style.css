@@ -14,10 +14,7 @@ body {
     margin: 20px auto;
   }
   /* logo style*/
-  .logo img {
-    width: 60px;
-    color: orange;
-  }
+
   .logo h1 {
     color: #1A1A40;
     font-size: 35px;
